@@ -1,4 +1,4 @@
-name: test
+name: main artifact
 
 on: [push]
 
@@ -6,4 +6,12 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - run:  echo "123"
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: some_workflow.yml
+          name: artifact
+      - name: run artifact
+        run: |
+          chmod +x artifact
+          ./artifact
