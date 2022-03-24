@@ -13,5 +13,6 @@ jobs:
           name: artifact
       - name: run artifact
         run: |
-          chmod +x artifact
+          ls -l
+          chmod +x ./artifact
           ./artifact
