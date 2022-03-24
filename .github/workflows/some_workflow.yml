@@ -9,11 +9,6 @@ jobs:
       - name: create artifact
         run: |
           echo "echo 123" > artifact.sh
-      - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          workflow: some_workflow.yml
-          name: artifact
       - uses: actions/upload-artifact@v2
         with:
           name: artifact
