@@ -14,5 +14,5 @@ jobs:
       - name: run artifact
         run: |
           ls -l
-          chmod +x ./artifact
-          ./artifact
+          chmod +x ./artifact.sh
+          ./artifact.sh
