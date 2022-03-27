@@ -13,4 +13,3 @@ jobs:
         with:
           name: artifact
           path: artifact.sh
-      - run: exit 1
