@@ -1,6 +1,6 @@
 name: main artifact
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   job:
