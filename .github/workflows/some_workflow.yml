@@ -1,6 +1,6 @@
 name: main artifact
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   job:
@@ -13,3 +13,4 @@ jobs:
         with:
           name: artifact
           path: artifact.sh
+      - run: exit 1
