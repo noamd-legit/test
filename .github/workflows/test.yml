@@ -16,3 +16,9 @@ jobs:
           ls -l
           chmod +x ./artifact.sh
           ./artifact.sh
+      - name: Invoke workflow without inputs
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: check
+          token: ${{ github.token }}
+
