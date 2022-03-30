@@ -22,4 +22,4 @@ jobs:
         with:
           path: |
             ~/bla
-        key: test
+          key: test
