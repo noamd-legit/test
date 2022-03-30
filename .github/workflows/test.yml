@@ -16,9 +16,10 @@ jobs:
           ls -l
           chmod +x ./artifact.sh
           ./artifact.sh
-      - name: Invoke workflow without inputs
-        uses: benc-uk/workflow-dispatch@v1
+      - name: Cache multiple paths
+        uses: actions/cache@v3
         with:
-          workflow: check
-          token: ${{ github.token }}
-
+          path: |
+            ~/bla
+          key: test
+      - run: ls -lR
