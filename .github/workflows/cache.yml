@@ -1,0 +1,19 @@
+name: main artifact
+
+on: [pull_request]
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create directory
+        run: |
+          mkdir bla
+          echo "123" > bla/test.txt
+      - name: Cache multiple paths
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/bla
+          key: test
+      - run: ls -lR

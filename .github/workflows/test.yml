@@ -10,16 +10,9 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: some_workflow.yml
-          name: artifact
+          name: artifact2
       - name: run artifact
         run: |
           ls -l
           chmod +x ./artifact.sh
           ./artifact.sh
-      - name: Cache multiple paths
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/bla
-          key: test
-      - run: ls -lR
