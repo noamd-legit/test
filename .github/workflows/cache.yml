@@ -15,5 +15,5 @@ jobs:
         with:
           path: |
             ~/bla
-          key: test
+          key: test2
       - run: ls -lR
