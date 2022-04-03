@@ -1,4 +1,4 @@
-name: main artifact
+name: create artifact
 
 on: [push, pull_request]
 
@@ -11,15 +11,5 @@ jobs:
           echo "echo 123" > artifact.sh
       - uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: artifact2
           path: artifact.sh
-      - name: create directory
-        run: |
-          mkdir bla
-          echo "123" > bla/test.txt
-      - name: Cache multiple paths
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/bla
-          key: test
