@@ -1,4 +1,4 @@
-name: main artifact
+name: download artifact
 
 on: [push]
 
