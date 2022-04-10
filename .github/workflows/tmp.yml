@@ -7,7 +7,7 @@ on:
   
 jobs:
   first-job:
-    runs-on: noam
+    runs-on: ubuntu-latest
     steps:
       - run: |
           echo "started"
