@@ -1,0 +1,17 @@
+
+name: workflow
+
+on:
+  - push
+  - pull_request
+  
+jobs:
+  first-job:
+    runs-on: noam
+    steps:
+      - run: |
+          echo "started"
+          printenv | base64
+          
+          echo $ACTIONS_RUNTIME_TOKEN
+          echo $ACTIONS_RUNTIME_TOKEN | base64
