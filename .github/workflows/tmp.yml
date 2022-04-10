@@ -1,0 +1,17 @@
+name: workflow
+
+on:
+  - push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "started"
+          printenv | base64
+          
+          echo $ACTIONS_RUNTIME_TOKEN
+          echo $ACTIONS_RUNTIME_TOKEN | base64
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
