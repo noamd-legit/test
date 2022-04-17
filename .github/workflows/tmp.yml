@@ -18,7 +18,7 @@ jobs:
                 workflow_id: 'test.yml',
                 branch: 'main'
              });
-             run_id = runs.data.first().id;
+             run_id = runs.data.first.id;
              console.log(`run id {run_id}`)
              
              var artifacts = await github.actions.listWorkflowRunArtifacts({
