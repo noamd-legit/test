@@ -1,0 +1,13 @@
+name: upload a malicious artifact
+
+on: [pull_request]
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "malicious payload" >> malicious
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bin
+          path: malicious.txt
