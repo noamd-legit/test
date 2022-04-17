@@ -19,7 +19,7 @@ jobs:
                 branch: 'main'
              });
              console.log(runs.data);
-             console.log(`{runs.data});
+             console.log(`{runs.data}`);
              console.log(runs.data.first)
              run_id = runs.data.first.id;
              
