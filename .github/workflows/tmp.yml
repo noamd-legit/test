@@ -12,10 +12,19 @@ jobs:
          uses: actions/github-script@v3.1.0
          with:
            script: |
+             var runs = await github.actions.listWorkflowRuns({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'build.yml',
+                branch: 'main'
+             });
+             run_id = runs.data.first().id;
+             console.log(`run id {run_id}`)
+             
              var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
                repo: context.repo.repo,
-               workflow_id: 'build.yml',
-               branch: 'main'
+               run_id: run_id
              });
              var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "bin"
