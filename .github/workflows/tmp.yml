@@ -18,11 +18,10 @@ jobs:
                 workflow_id: 'test.yml',
                 branch: 'main'
              });
-             console.log(runs.data);
-             console.log(`${runs.data}`);
-             console.log(runs.data.workflow_runs)
+
              console.log(runs.data.workflow_runs[0])
-             run_id = runs.data.workflow_runs[0].id;
+             console.log(runs.data[0].id)
+             // run_id = runs.data.workflow_runs[0].id;
              
              console.log(`run id {run_id}`)
              
