@@ -20,6 +20,8 @@ jobs:
              });
              console.log(runs.data);
              console.log(`${runs.data}`);
+             console.log(runs.data.workflow_runs)
+             console.log(runs.data.workflow_runs[0])
              console.log(runs.data.first)
              run_id = runs.data.workflow_runs.first.id;
              
