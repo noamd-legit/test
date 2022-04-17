@@ -16,7 +16,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 workflow_id: 'build.yml',
-                branch: 'noamd-legit:main'
+                branch: 'main'
              });
 
              console.log('1111111111111')
