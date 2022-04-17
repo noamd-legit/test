@@ -19,8 +19,10 @@ jobs:
                 branch: 'main'
              });
 
+             console.log('1111111111111')
              console.log(runs.data.workflow_runs[0])
-             console.log(runs.data[0].id)
+             console.log('2222222222222')
+             console.log(runs.data[0])
              // run_id = runs.data.workflow_runs[0].id;
              
              console.log(`run id {run_id}`)
