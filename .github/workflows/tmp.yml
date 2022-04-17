@@ -20,10 +20,9 @@ jobs:
              });
 
              console.log('1111111111111')
-             console.log(runs.data.workflow_runs[0])
-             console.log('2222222222222')
-             console.log(runs.data[0])
-             run_id = runs.data.workflow_runs[0].id;
+             const fuck = runs.data.workflow_runs[0];
+             console.log(fuck)
+             run_id = fuck.id;
              
              console.log(`run id {run_id}`)
              
