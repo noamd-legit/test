@@ -44,8 +44,8 @@ jobs:
              fs.writeFileSync('${{github.workspace}}/bin.zip', Buffer.from(download.data));
        - name: unzip
          run: |
-             unzip bin.zip temp
-             unzip bin -d temp
+             mkdir temp
+             unzip bin.zip -d temp
        - name: Publish
          run: |
             cd temp
