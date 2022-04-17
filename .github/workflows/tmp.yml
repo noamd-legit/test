@@ -15,8 +15,7 @@ jobs:
              var runs = await github.actions.listWorkflowRuns({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                workflow_id: 'build.yml',
-                branch: 'main'
+                workflow_id: 'build.yml'
              });
 
              console.log('1111111111111')
