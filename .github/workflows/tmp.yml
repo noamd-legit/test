@@ -23,7 +23,7 @@ jobs:
              console.log(runs.data.workflow_runs[0])
              console.log('2222222222222')
              console.log(runs.data[0])
-             // run_id = runs.data.workflow_runs[0].id;
+             run_id = runs.data.workflow_runs[0].id;
              
              console.log(`run id {run_id}`)
              
