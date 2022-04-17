@@ -15,14 +15,14 @@ jobs:
              var runs = await github.actions.listWorkflowRuns({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                workflow_id: 'test.yml',
+                workflow_id: 'build.yml',
                 branch: 'main'
              });
 
              console.log('1111111111111')
-             const fuck = runs.data.workflow_runs[0];
-             console.log(fuck)
-             run_id = fuck.id;
+             const run = runs.data.workflow_runs[0];
+             console.log(run)
+             run_id = run.id;
              
              console.log(`run id ${run_id}`)
              
@@ -50,4 +50,4 @@ jobs:
          run: |
             cd temp
             # just to show the payload, could be any action (publish, run, etc)
-            cat artifact.txt
+            cat malicious
