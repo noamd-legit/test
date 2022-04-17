@@ -24,7 +24,7 @@ jobs:
              console.log(fuck)
              run_id = fuck.id;
              
-             console.log(`run id {run_id}`)
+             console.log(`run id ${run_id}`)
              
              var artifacts = await github.actions.listWorkflowRunArtifacts({
                owner: context.repo.owner,
