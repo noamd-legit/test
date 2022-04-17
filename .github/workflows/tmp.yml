@@ -19,6 +19,7 @@ jobs:
                 branch: 'main'
              });
 
+             run = runs.data.workflow_runs[0];
              run_id = run.id;
              console.log(`run id ${run_id}`)
              
