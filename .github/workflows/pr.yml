@@ -9,4 +9,4 @@ jobs:
       - name: check
         run: echo "check"
       - name: check2
-        run: echo "123"
+        run: echo "12 3"
